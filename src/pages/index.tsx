@@ -63,13 +63,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <main className="flex space-x-4 bg-gray-800 p-6 h-full min-h-screen items-center justify-center">
+    <main className="flex flex-col md:flex-row space-x-0 space-y-4 md:space-x-4 md:space-y-0 bg-gray-800 p-6 h-full min-h-screen items-center justify-center">
       <Head>
         <title key="title">Code Editor</title>
       </Head>
-      <div className="border border-gray-700 rounded-lg overflow-hidden w-1/2">
+      <div className="border border-gray-700 rounded-lg overflow-hidden w-full md:w-1/2 h-full">
         <Editor
-          height="100%"
+          height="90vh"
           width="100%"
           defaultLanguage="javascript"
           defaultValue="// start coding..."
@@ -78,15 +78,17 @@ const App: React.FC = () => {
         />
       </div>
 
-      <div className="flex flex-col space-y-4 w-1/2 h-full">
+      <div className="flex flex-col space-y-4 justify-between w-full md:w-1/2 h-[90vh]">
         <iframe
           title="preview"
           ref={iframeRef}
-          className="w-full bg-transparent rounded-lg border-gray-700 border h-4/5"
+          className="w-full bg-transparent rounded-lg border-gray-700 border h-full min-h-5/6"
         />
         <button
-          className="rounded-lg px-8 py-4 bg-gray-600 uppercase font-bold h-1/5 hover:bg-gray-500 text-gray-200 transition-colors duration-200 ease-linear"
+          className={`rounded-lg px-8 py-4 bg-gray-600 uppercase font-bold text-gray-200 transition-colors duration-200 ease-linear
+          ${!code ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-500"}`}
           onClick={handlePublish}
+          disabled={!code}
         >
           Export/Publish
         </button>
