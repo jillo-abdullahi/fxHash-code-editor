@@ -1,38 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Standalone Project Publishing Platform
+
+This project is a standalone project publishing platform where users can write JavaScript code, see a real-time preview of the code, and download the code as a ZIP file containing an HTML document. The platform uses Next.js, React, TypeScript, the Monaco Editor for the code editor, and JSZip for generating the ZIP file.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have Node.js installed on your machine. This project was built using Node.js version 14.x.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Clone the repository
+    ```bash
+    git clone https://github.com/jillo-abdullahi/fxHash-code-editor.git
+    ```
+    
+2. Install the dependencies
+    ```bash
+    cd code-editor
+    npm install
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Start the Next.js development server
+    ```bash
+    npm run dev
+    ```
+    
+4. Open a browser and navigate to `http://localhost:3000` to see the application running.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
 
-## Learn More
+- **Code Editor**: A feature-rich code editor using Monaco Editor with JavaScript syntax highlighting.
 
-To learn more about Next.js, take a look at the following resources:
+- **Real-time Preview**: An iframe that displays a real-time preview of the user's JavaScript code.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Downloadable ZIP file**: The ability for the user to download a ZIP file containing an HTML document with their code.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Built With
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org/) - The web framework used
+- [React](https://reactjs.org/) - The library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - The language for application-scale JavaScript
+- [@monaco-editor/react](https://www.npmjs.com/package/@monaco-editor/react) - The library for adding the Monaco Editor to the project
+- [JSZip](https://stuk.github.io/jszip/) - The library for generating ZIP files
+- [DOMPurify](https://github.com/cure53/DOMPurify) - The library for sanitizing HTML
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Thanks to the creators and contributors of Next.js, React, TypeScript, Monaco Editor, JSZip, and DOMPurify for their wonderful work.
